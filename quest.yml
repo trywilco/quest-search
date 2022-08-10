@@ -30,6 +30,5 @@ messages:
   questFinished:
     person: head-of-rd
     messages:
-    - text: "That's it! What a remarkable job you did today! In fact, right now we’re having a party in your honor on the executive floor, with champagne, [beef bath salt](https://www.anythink.market/item/roast-beef-bath-soak-zhxpjb), and everything! I’m sorry you’re not allowed on this floor, but you know, one day, maybe. 
-Meanwhile, **let me know that you're ready for your [next project](${platform.home}) :)**"
+    - text: "That's it! What a remarkable job you did today! In fact, right now we’re having a party in your honor on the executive floor, with champagne, [beef bath salt](https://www.anythink.market/item/roast-beef-bath-soak-zhxpjb), and everything! I’m sorry you’re not allowed on this floor, but you know, one day, maybe.\nMeanwhile, **let me know that you're ready for your [next project](${platform.home}) :)**"
       delay: 2000
