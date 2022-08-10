@@ -1,4 +1,4 @@
-xx/* eslint-disable */
+/* eslint-disable */
 const puppeteer = require("puppeteer");
 
 describe("Check that the search box is shown only after clicking get", () => {
