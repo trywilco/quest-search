@@ -1,0 +1,57 @@
+id: search_endpoint_generic
+hints:
+- Glad you asked! Did you notice we already support some filtering for fetching items in our backend (for example, filter by tag)? You can add another filter by term.
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: "So, here’s the thing"
+        delay: 1500
+      - text: "We’ve been getting complaints about the way our marketplace is built. Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!” (:heart_eyes:) or “Everything is so messy, it almost looks like you’re just selling a bunch of random stuff”. You know, the usual."
+        delay: 1200
+      - text: "I know we should follow the protocol and ignore them, but Eve, our product manager, is a bit worried— so we’ve been asked to add a search option to the marketplace. Or, more precisely, I was asked to ask you."
+        delay: 600
+      - text: "**_Consider yourself asked!_**"
+        delay: 12000
+      - text: "But, before we implement the full UI, we first need to **add product filtering support to our API.** In other words, when retrieving a list of items using a GET request, there should be an option to **add a query filter called “title”**, so that once we call this endpoint - the backend will show all the relevant items, whose title contains the same title query."
+        delay: 900
+      - text: "You’re not being timed on this, so I’m totally not starting a timer right now, just don’t forget to send a PR when you’re done. "
+        delay: 19800
+
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: "${githubPrLifecycleStatus}"
+      cases:
+        github_pr_opened:
+          do:      
+          - actionId: github_pr_comment
+            params:
+              person: head-of-rd
+              message: "Lovely. Let me take a look."
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: github_pr_approve
+            params:
+              person: head-of-rd
+              message: "Looking good! Now we can move on to the UI. \nI'll send you more details on Snack. "
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: github_pr_reject
+            params:
+              person: head-of-rd
+              message: "Umm… something is not quite right, please take another look and try again."
+        github_pr_merged:
+          do:
+          - actionId: finish_step
+
+
+githubActions:
+  backend:
+    capabilities:
+    - axios
+    - dotenv
+    testFile: "filter.js"

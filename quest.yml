@@ -1,0 +1,36 @@
+title: Search party
+description: "As an elite marketplace, it's of most importance to match ${companyName} users with the perfect product they need  - even if they didn’t know that they need them to begin with.
+Therefore, in this quest, you'll create an easy way for ${companyName}’s users to find what they're truly looking for."
+slogan: There's always room for improvement.
+simulations:
+- search_endpoint_generic
+- search_frontend_generic
+- search_empty_generic
+- search_secret_open_generic
+duration: 3
+skills:
+- database
+- backend
+- frontend
+questDependency: docker_localsetup
+messages:
+  questStarted:
+    person: head-of-rd
+    messages:
+    - text: "![](https://media.giphy.com/media/rcqCnhuDvFAF1WoDN3/giphy.gif)"
+      delay: 0
+    - text: "Oh, great, you're here!"
+      delay: 300
+    - text: "before you do anything else, please **run the following command** on your repo: \`${scriptCommand}\`, and **let me know** once you're done."
+      delay: 600
+  questStartedNotReady:
+    person: head-of-rd
+    messages:
+    - text: "Let me know when you are ready."
+      delay: 300
+  questFinished:
+    person: head-of-rd
+    messages:
+    - text: "That's it! What a remarkable job you did today! In fact, right now we’re having a party in your honor on the executive floor, with champagne, [beef bath salt](https://www.anythink.market/item/roast-beef-bath-soak-zhxpjb), and everything! I’m sorry you’re not allowed on this floor, but you know, one day, maybe. 
+Meanwhile, **let me know that you're ready for your [next project](${platform.home}) :)**"
+      delay: 2000
