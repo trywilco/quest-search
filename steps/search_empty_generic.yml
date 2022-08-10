@@ -48,7 +48,7 @@ trigger:
           - actionId: finish_step
 
 githubActions:
-  backend:
+  backend: {}
   frontend:
     capabilities:
     - jest-puppeteer
