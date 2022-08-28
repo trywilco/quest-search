@@ -28,7 +28,7 @@ trigger:
   type: github_pr_lifecycle_status
   flowNode:
     switch:
-      key: "${githubPrLifecycleStatus}"
+      key: "${eventType}"
       cases:
         github_pr_opened:
           do:      
