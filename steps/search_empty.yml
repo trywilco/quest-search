@@ -1,12 +1,12 @@
-id: search_empty_generic
-hints: 
+id: search_empty
+hints: []
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: head-of-rd
       messages:
-      - text: "Oh no, someone just searched for a dishwasher!"
+      - text: Oh no, someone just searched for a dishwasher!
         delay: 1000
       - text: "A dishwasher! Who would want to buy a regular dishwasher?! Oh boy, we didn’t expect this to happen, like, ever. But some users just don’t know what’s good for them. I already checked with HR but they say we can’t punish them for it, so lets at least make sure we sternly reprimand them:"
         delay: 2700
@@ -14,35 +14,56 @@ startFlow:
         delay: 7000
       - text: "Our designer said it should look something like this:"
         delay: 2300
-      - text: "https://res.cloudinary.com/ness90210/image/upload/v1658051347/Anythink_search/Design/no-items-found_nyyhsa.png"
+      - text: https://res.cloudinary.com/ness90210/image/upload/v1658051347/Anythink_search/Design/no-items-found_nyyhsa.png
         delay: 1500
-      - text: "And as usual, when ready, open a PR. "
+      - text: And as usual, when ready, open a PR.
         delay: 1200
 
 trigger:
   type: github_pr_lifecycle_status
   flowNode:
     switch:
-      key: "${eventType}"
+      key: ${eventType}
       cases:
         github_pr_opened:
           do:      
           - actionId: github_pr_comment
             params:
               person: head-of-rd
-              message: "Got it, will review in a sec’"
+              message: Got it, will review in a sec’
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Got it, will review in a sec’
+                delay: 300
         github_pr_workflow_complete_success:
           do:
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: "Approved! Awesome job 😀"
+              message: Approved! Awesome job 😀
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Approved! Awesome job 😀
+                delay: 300
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: "Let’s try this again, shall we?"
+              message: Let’s try this again, shall we?
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Let’s try this again, shall we?
+                delay: 300
         github_pr_merged:
           do:
           - actionId: finish_step

@@ -1,0 +1,79 @@
+id: search_frontend
+hints:
+- Ok, let me see if I can help - <br> So, since we can already fetch certain items using all kinds of filters, maybe you should check how it’s filtered there and add another filter for “term”, in the title.
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: head-of-rd
+      messages:
+      - text: Ok, so now that we have an API that can filter results, it’s time to add a UI!
+        delay: 1000
+      - text: "**Add a search box to the main page, with the id “search-box”.**"
+        delay: 2000
+      - text: "Here’s what it should look like:"
+        delay: 2000
+      - text: https://res.cloudinary.com/ness90210/image/upload/v1658051139/Anythink_search/UI/Screen-Shot-SearchUI.png
+        delay: 1800
+      - text: "When creating the UI, make sure it can:"
+        delay: 600
+      - text: "- Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted."
+        delay: 2400
+      - text: "- Use the search mechanism to filter the items presented on the homepage."
+        delay: 2500
+      - text: When you’re done, open a PR with the frontend code changes and I’ll review it as soon as possible :)
+        delay: 3900
+
+trigger:
+  type: github_pr_lifecycle_status
+  flowNode:
+    switch:
+      key: ${eventType}
+      cases:
+        github_pr_opened:
+          do:      
+          - actionId: github_pr_comment
+            params:
+              person: head-of-rd
+              message: That was fast! Let’s see...
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: That was fast! Let’s see...
+                delay: 300
+        github_pr_workflow_complete_success:
+          do:
+          - actionId: github_pr_approve
+            params:
+              person: head-of-rd
+              message: Yay, it works!
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Yay, it works!
+                delay: 300
+        github_pr_workflow_complete_failure:
+          do:
+          - actionId: github_pr_reject
+            params:
+              person: head-of-rd
+              message: Bummer,  it doesn’t seem like the frontend works. Let’s give it another try.
+
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+              - text: Bummer,  it doesn’t seem like the frontend works. Let’s give it another try.
+                delay: 300
+        github_pr_merged:
+          do:
+          - actionId: finish_step
+
+githubActions:
+  frontend:
+    capabilities: []
+    testFile: "search-box.test.js"
