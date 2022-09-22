@@ -23,9 +23,8 @@ describe("Check that the search box is shown only after clicking get", () => {
 
     const isSearchVisible = async (page) => {
       try {
-        await page.waitForSelector("#search-box", {
-          visible: true,
-          timeout: 1500,
+        await page.waitForSelector(`#search-box:not([style*="display: none"])`, {
+          timeout: 5000,
         });
         return true;
       } catch (e) {
