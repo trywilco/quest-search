@@ -22,9 +22,8 @@ describe("Check that the empty view shows upon no results", () => {
 
     const isEmptyViewVisible = async (page) => {
       try {
-        await page.waitForSelector("#empty", {
-          visible: true,
-          timeout: 1500,
+        await page.waitForSelector(`#empty:not([style*="display: none"])`, {
+          timeout: 5000,
         });
         return true;
       } catch (e) {
