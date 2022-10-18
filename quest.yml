@@ -13,11 +13,6 @@ skills:
 - database
 - backend
 - frontend
-learningObjectives: 
-- Creating an API endpoint 
-- Adding a UI component 
-- Handling edge cases 
-- Conditional visibility of a UI component
 questDependency: docker_localsetup
 messages:
   questStarted:
