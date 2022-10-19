@@ -1,4 +1,6 @@
 id: search_endpoint
+learningObjectives: 
+- Creating an API endpoint 
 hints:
 - Glad you asked! Did you notice we already support some filtering for fetching items in our backend (for example, filter by tag)? You can add another filter by term.
 startFlow:
@@ -19,7 +21,6 @@ startFlow:
         delay: 900
       - text: You’re not being timed on this, so I’m totally not starting a timer right now, just don’t forget to send a PR when you’re done.
         delay: 19800
-
 trigger:
   type: github_pr_lifecycle_status
   flowNode:

@@ -1,4 +1,6 @@
 id: search_empty
+learningObjectives: 
+- Handling edge cases
 hints: []
 startFlow:
   do:
