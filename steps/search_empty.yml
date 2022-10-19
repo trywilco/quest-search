@@ -1,7 +1,9 @@
 id: search_empty
 learningObjectives: 
 - Handling edge cases
-hints: []
+hints:
+- When there're no results, make sure the div with the id `empty` is visible on the page
+- Don't forget to remove the emoty div on start and show it only after you get an empty result
 startFlow:
   do:
   - actionId: bot_message
