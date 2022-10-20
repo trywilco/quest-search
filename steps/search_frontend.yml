@@ -2,7 +2,7 @@ id: search_frontend
 learningObjectives: 
 - Adding a UI component 
 hints:
-- Ok, let me see if I can help - <br> So, since we can already fetch certain items using all kinds of filters, maybe you should check how it’s filtered there and add another filter for “term”, in the title.
+- Ok, let me see if I can help, did you add an [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for searching?
 startFlow:
   do:
   - actionId: bot_message
