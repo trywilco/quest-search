@@ -2,7 +2,7 @@ id: search_endpoint
 learningObjectives: 
 - Creating an API endpoint 
 hints:
-- Glad you asked! Did you notice we already support some filtering for fetching items in our backend (for example, filter by tag)? You can add another filter by term.
+- Glad you asked! Are you aware that our backend already supports some filtering options (for example, filter by tag)? You can add another filter by term.
 - Our product manager insists that partial matches, not only exact matches, must be returned by the query. 
 startFlow:
   do:
