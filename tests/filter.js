@@ -53,8 +53,13 @@ const testItem = async () => {
     return false;
   }
 
+  if (getFilteredItems.data?.items.length === 0) {
+    console.log(`=!=!=!=!= ERROR: Searched for items with title 'title' but didn't find anything, although we have an item with the title 'title1'`);
+    return false;
+  }
+
   if (getFilteredItems.data?.items.length !== 1) {
-    console.log(`=!=!=!=!= ERROR: Wrong number of items filtered`);
+    console.log(`=!=!=!=!= ERROR: Searched for items with title 'title' but got more than 1 item`);
     return false;
   }
 
