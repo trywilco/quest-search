@@ -18,7 +18,7 @@ startFlow:
         delay: 600
       - text: "**_Consider yourself asked!_**"
         delay: 12000
-      - text: But, before we implement the full UI, we first need to **add product filtering support to our API.** In other words, when retrieving a list of items using a GET request, there should be an option to **add a query filter called “title”**, so that once we call this endpoint - the backend will show all the relevant items, whose title contains the same title query.
+      - text: But, before we implement the full UI, we first need to **add product filtering support to our API.** In other words, when retrieving a list of items using a GET request, there should be an option to **add a query filter called “title”**, so that once we call this endpoint - the backend will show all the relevant items, whose title **contains** the same title query.
         delay: 900
       - text: You’re not being timed on this, so I’m totally not starting a timer right now, just don’t forget to send a PR when you’re done.
         delay: 19800
