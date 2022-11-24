@@ -14,7 +14,7 @@ describe("Check that the empty view shows upon no results", () => {
     await browser.close();
   });
 
-  it("Shows the empty placeholder only after unsuccessful search", async () => {
+  it("Shows the empty placeholder only after unsuccessful search (testing on empty database)", async () => {
     await page.goto("http://localhost:3001", {
       waitUntil: "load",
       timeout: 60000,
