@@ -19,9 +19,9 @@ startFlow:
         delay: 1800
       - text: ":instruction[**When creating the UI, make sure it can:**]"
         delay: 3300
-      - text: "- Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted."
+      - text: "**-Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted.**"
         delay: 2400
-      - text: "- Use the search mechanism to filter the items presented on the homepage."
+      - text: "**-Use the search mechanism to filter the items presented on the homepage.**"
         delay: 2500
       - text: When you’re done, open a PR with the frontend code changes and I’ll review it as soon as possible :)
         delay: 3900
@@ -57,7 +57,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Yay, it works!
-                delay: 300
+                delay: 1000
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
@@ -70,7 +70,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Bummer,  it doesn’t seem like the frontend works. Let’s give it another try.
-                delay: 300
+                delay: 1000
         github_pr_merged:
           do:
           - actionId: finish_step
