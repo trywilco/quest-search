@@ -2,7 +2,7 @@ id: search_frontend
 learningObjectives: 
 - Adding a UI component 
 hints:
-- Ok, let me see if I can help, did you add an [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for searching?
+- You should probably try adding an [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for searching.
 startFlow:
   do:
   - actionId: bot_message
@@ -10,18 +10,18 @@ startFlow:
       person: head-of-rd
       messages:
       - text: Ok, so now that we have an API that can filter results, it’s time to add a UI!
-        delay: 1000
-      - text: "**Add a search box to the main page, with the id “search-box”.**"
-        delay: 2000
+        delay: 1200
+      - text: ":instruction[**Add a search box to the main page, with the id “search-box”.**]"
+        delay: 3000
       - text: "Here’s what it should look like:"
-        delay: 2000
+        delay: 2100
       - text: https://res.cloudinary.com/ness90210/image/upload/v1658051139/Anythink_search/UI/Screen-Shot-SearchUI.png
         delay: 1800
-      - text: "When creating the UI, make sure it can:"
-        delay: 600
-      - text: "- Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted."
+      - text: ":instruction[**When creating the UI, make sure it can:**]"
+        delay: 3300
+      - text: "**-Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted.**"
         delay: 2400
-      - text: "- Use the search mechanism to filter the items presented on the homepage."
+      - text: "**-Use the search mechanism to filter the items presented on the homepage.**"
         delay: 2500
       - text: When you’re done, open a PR with the frontend code changes and I’ll review it as soon as possible :)
         delay: 3900
@@ -57,7 +57,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Yay, it works!
-                delay: 300
+                delay: 1000
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
@@ -70,7 +70,7 @@ trigger:
               person: head-of-rd
               messages:
               - text: Bummer,  it doesn’t seem like the frontend works. Let’s give it another try.
-                delay: 300
+                delay: 1000
         github_pr_merged:
           do:
           - actionId: finish_step

@@ -14,11 +14,11 @@ startFlow:
         delay: 1000
       - text: "A dishwasher! Who would want to buy a regular dishwasher?! Oh boy, we didn’t expect this to happen, like, ever. But some users just don’t know what’s good for them. I already checked with HR but they say we can’t punish them for it, so lets at least make sure we sternly reprimand them:"
         delay: 2700
-      - text: "Please **add an appropriate scolding text to the system,** to be displayed in the results box when a wayward user types in a string that doesn’t match any product in the system, and **make sure that it had the id \"empty\".**"
+      - text: "Please :instruction[**add an appropriate scolding text to the system,**] to be displayed in the results box when a wayward user types in a string that doesn’t match any product in the system, and :instruction[**make sure that it had the id \"empty\"**]"
         delay: 7000
       - text: "Our designer said it should look something like this:"
         delay: 2300
-      - text: https://res.cloudinary.com/ness90210/image/upload/v1658051347/Anythink_search/Design/no-items-found_nyyhsa.png
+      - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/search2_hcaplg.png
         delay: 1500
       - text: And as usual, when ready, open a PR.
         delay: 1200
