@@ -10,15 +10,15 @@ startFlow:
       person: head-of-rd
       messages:
       - text: Ok, so now that we have an API that can filter results, it’s time to add a UI!
-        delay: 1000
-      - text: ":instruction[Add a search box to the main page, with the id “search-box”.**["
-        delay: 2000
+        delay: 1200
+      - text: ":instruction[Add a search box to the main page, with the id “search-box”.**]"
+        delay: 3000
       - text: "Here’s what it should look like:"
-        delay: 2000
+        delay: 2100
       - text: https://res.cloudinary.com/ness90210/image/upload/v1658051139/Anythink_search/UI/Screen-Shot-SearchUI.png
         delay: 1800
       - text: ":instruction[When creating the UI, make sure it can:]"
-        delay: 600
+        delay: 3300
       - text: "- Search for matches in item titles after at least 3 characters are typed, with a new search for every new character added or subtracted."
         delay: 2400
       - text: "- Use the search mechanism to filter the items presented on the homepage."
