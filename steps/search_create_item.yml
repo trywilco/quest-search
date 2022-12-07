@@ -1,6 +1,6 @@
-id: dataseeding_add_item
+id: search_create_item
 learningObjectives:
-  - Manually adding an item to the DB
+  - Manually adding an item to Anythink Market
 hints:
   - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
   - Still stuck, ah? Try to find **which api route add item to the DB, and which piece of code in the frontend call it.**
