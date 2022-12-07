@@ -1,4 +1,4 @@
-id: search_endpoint
+id: search_create_user
 hints:
   - Are you sure your local environment is still up? Did you remember running `docker-compose up`?
 startFlow:
