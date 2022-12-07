@@ -1,0 +1,66 @@
+id: search_endpoint
+hints:
+- Are you sure your local
+- Glad you asked! Are you aware that our backend already supports some filtering options (for example, filter by tag)? You can add another filter by term.
+- Our product manager insists that partial matches, not only exact matches, must be returned by the query. 
+startFlow:
+  if:
+    conditions:
+      - conditionId: user_has_feature_flag
+        params:
+          featureFlag: 'codespaces'
+    then:
+      do:
+        - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: So, here’s the thing
+                  delay: 1500
+                - text: We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built. Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!” (😍) or “Everything is so messy, it almost looks like you’re just selling a bunch of random stuff”. You know, the usual.
+                  delay: 3000
+                - text: I know we should follow the protocol and ignore them, but Eve, our product manager, is a bit worried— so :instruction[we’ve been asked to add a search option to the marketplace.] Or, more precisely, I was asked to ask you.
+                  delay: 2300
+                - text: "**_Consider yourself asked!_**"
+                  delay: 9000
+                - text: But, before we do anything, you probably want to see the issue by yourself, in your local environment.
+                  delay: 1200
+                - text: To do that, :instruction[**Go to https://${user.codespace.name}-3001.preview.app.github.dev/register and **create a new user.**]{block=true}
+                  delay: 4000
+    else:
+      do:
+        - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: So, here’s the thing
+                  delay: 1500
+                - text: We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built. Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!” (😍) or “Everything is so messy, it almost looks like you’re just selling a bunch of random stuff”. You know, the usual.
+                  delay: 3000
+                - text: I know we should follow the protocol and ignore them, but Eve, our product manager, is a bit worried— so :instruction[we’ve been asked to add a search option to the marketplace.] Or, more precisely, I was asked to ask you.
+                  delay: 2300
+                - text: "**_Consider yourself asked!_**"
+                  delay: 9000
+                - text: But, before we do anything, you probably want to see the issue by yourself, in your local environment.
+                  delay: 1200
+                - text: To do that, :instruction[**Go to http://localhost:3001/register and **create a new user.**]{block=true}
+                  delay: 4000
+trigger:
+  type: local_page_load
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${path}"
+            regex: ^/@*
+            flags: i
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: Amazing, you're part of us, Anythink traders now!
+                  delay: 2000
+          - actionId: finish_step

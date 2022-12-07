@@ -1,0 +1,41 @@
+id: dataseeding_add_item
+learningObjectives:
+  - Manually adding an item to the DB
+hints:
+  - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
+  - Still stuck, ah? Try to find **which api route add item to the DB, and which piece of code in the frontend call it.**
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: Ok ok so you created a user on Anythink, but doesn’t something feel a bit off?
+            delay: 1700
+          - text: 'I’ll give you a hint: your local Anythink marketplace is probably emptier than the office fridge after the unfortunate ferret accident.'
+            delay: 2500
+          - text: 'So go ahead, :instruction[**add a single item to the Marketplace**].'
+            delay: 2500
+trigger:
+  type: local_page_load
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${path}"
+            regex: ^/item/
+            flags: i
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: OK! Good! You have an item in the system, and that’s fantastic.
+                  delay: 2000
+                - text: But why would you put ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))} as your first choice?
+                  delay: 1300
+                - text: Nevermind that, as Anythink's motto says - "Never ask questions you don't want to know the answers to." Moving on! ✨
+                  delay: 1700
+          - actionId: finish_step

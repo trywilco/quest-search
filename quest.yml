@@ -4,6 +4,8 @@ description: As an elite marketplace, it's of most importance to match ${company
 level: intermediate
 slogan: Searching... Seek and Debug!
 steps:
+- search_create_user
+- search_create_item
 - search_endpoint
 - search_frontend
 - search_empty
