@@ -6,6 +6,7 @@ slogan: Searching... Seek and Debug!
 steps:
 - search_create_user
 - search_create_item
+- search_find_endpoint
 - search_endpoint
 - search_frontend
 - search_empty

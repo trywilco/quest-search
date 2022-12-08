@@ -1,0 +1,43 @@
+id: search_create_item
+learningObjectives:
+  - Http requests
+hints:
+  - Did you try opening the dev tools to see the current request to the backend?
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: Find out what's the endpoint path the frontend hits for fetching the marketplace items
+            delay: 1700
+          - text: When you do, just reply it to me.
+            delay: 2500
+trigger:
+  type: user_message
+  params:
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${userMessageText}"
+            regex: '/api/items\?limit=1000&offset=0$'
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: "Look at you, such a hacker! Nailed it."
+                  delay: 1500
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: "Umm, that doesn't look right. Are you sure this is the path that will return you the marketplace items?"
+                  delay: 1400
