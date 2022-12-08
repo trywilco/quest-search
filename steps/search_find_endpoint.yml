@@ -11,7 +11,7 @@ startFlow:
         messages:
           - text: Find out what's the endpoint path the frontend hits for fetching the marketplace items
             delay: 1700
-          - text: When you do, just reply it to me.
+          - text: When you do, just :instruction[reply it to me].
             delay: 2500
 trigger:
   type: user_message
@@ -23,7 +23,8 @@ trigger:
         - conditionId: text_match_regex
           params:
             text: "${userMessageText}"
-            regex: '/api/items\?limit=1000&offset=0$'
+            regex: .*/api/items.*
+            flags: i
       then:
         do:
           - actionId: bot_message

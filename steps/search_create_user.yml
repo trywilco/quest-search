@@ -17,7 +17,7 @@ startFlow:
             delay: 9000
           - text: But, before we do anything, you probably want to see the issue by yourself, in your local environment.
             delay: 1200
-          - text: To do that, :instruction[**Go to your local Anythink Market website and **sign up**.]{block=true}
+          - text: To do that, :instruction[Go to your local Anythink Market website and **sign up**.]{block=true}
             delay: 4000
 
 trigger:
