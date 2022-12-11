@@ -2,16 +2,16 @@ id: search_find_endpoint
 learningObjectives:
   - Http requests
 hints:
-  - Did you try opening the dev tools to see the current request to the backend?
+  - Try opening the **dev tools** to see the current request to the backend.
 startFlow:
   do:
     - actionId: bot_message
       params:
         person: head-of-rd
         messages:
-          - text: Find out what's the endpoint path the frontend hits for fetching the marketplace items
-            delay: 1700
-          - text: When you do, just :instruction[reply it to me].
+          - text: Now you should :instruction[find out what's the endpoint path that the frontend hits, for fetching the marketplace items]
+            delay: 3000
+          - text: When you do, just :instruction[send me a message with the link].
             delay: 2500
 trigger:
   type: user_message
@@ -31,7 +31,7 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: "Look at you, such a hacker! Nailed it."
+                - text: Nailed it!
                   delay: 1500
           - actionId: finish_step
       else:
