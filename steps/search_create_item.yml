@@ -10,10 +10,8 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: Ok ok so you created a user on Anythink, but doesn’t something feel a bit off?
+          - text: Ok so you created a user on Anythink, but now you need to have something to search for. 
             delay: 1700
-          - text: 'I’ll give you a hint: your local Anythink marketplace is probably emptier than the office fridge after the unfortunate ferret accident.'
-            delay: 2500
           - text: 'So go ahead, :instruction[**add a single item to the Marketplace**].'
             delay: 2500
 trigger:
@@ -32,10 +30,6 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: OK! Good! You have an item in the system, and that’s fantastic.
+                - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you've chosen to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
                   delay: 2000
-                - text: But why would you put ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))} as your first choice?
-                  delay: 1300
-                - text: Nevermind that, as Anythink's motto says - "Never ask questions you don't want to know the answers to." Moving on! ✨
-                  delay: 1700
           - actionId: finish_step
