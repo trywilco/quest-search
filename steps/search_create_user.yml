@@ -7,15 +7,17 @@ startFlow:
       params:
         person: head-of-rd
         messages:
+          - text: https://media.giphy.com/media/Tg6fSeh25F1b9dRCuL/giphy.gif
+            delay: 1800
           - text: "So, here’s the thing"
-            delay: 1500
-          - text: "We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built. Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!” (😍) or “Everything is so messy, it almost looks like you’re just selling a bunch of random stuff”. You know, the usual."
-            delay: 3000
-          - text: I know we should follow the protocol and ignore them, but Eve, our product manager, is a bit worried— so :instruction[we’ve been asked to add a search option to the marketplace.] Or, more precisely, I was asked to ask you.
+            delay: 1700
+          - text: "We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built. Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!” (😍 I know, right?!)"            
+            delay: 3200
+          - text: or “Everything is so messy, it's almost looks like you’re just selling a bunch of random stuff”. You know, the usual.
+            delay: 3400
+          - text: I know we should follow the protocol and ignore them, but product wants us to **add a search option to the marketplace.**
             delay: 2300
-          - text: "**_Consider yourself asked!_**"
-            delay: 9000
-          - text: But, before we do anything, you probably want to see the issue by yourself, in your local environment.
+          - text: But, before we do anything, you probably want to **see the issue by yourself**, in your local environment.
             delay: 1200
           - text: To do that, :instruction[Go to your local Anythink Market website and **sign up**.]{block=true}
             delay: 4000
@@ -36,6 +38,6 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: Amazing, you're part of us, Anythink traders now!
+                - text: Cool, 
                   delay: 2000
           - actionId: finish_step
