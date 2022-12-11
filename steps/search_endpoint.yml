@@ -2,7 +2,6 @@ id: search_endpoint
 learningObjectives: 
 - Creating an API endpoint 
 hints:
-- Um, you should probably try opening the dev tools, to see the current request to the backend.
 - Glad you asked! Are you aware that our backend already supports some filtering options (for example, filter by tag)? You can add another filter by term.
 - Our product manager insists that partial matches, not only exact matches, must be returned by the query. 
 startFlow:
@@ -13,7 +12,7 @@ startFlow:
       messages:
       - text: Now (before we implement the full UI), we want to add the ability to filter by title!
         delay: 1500
-      - text: So you first need to :instruction[**add product filtering support to our API.**] In other words, when retrieving a list of items using a GET request, there should be an option to :instruction[**add a query filter called “title”**], so that once we call this endpoint - the backend will show all the relevant items, :instruction[**whose title `contains` the same title query**].
+      - text: So you first need to :instruction[**add product filtering support to our API.**] In other words, when retrieving a list of items using a GET request, there should be an option to :instruction[**add a query parameter called “title”**], so that once we call this endpoint - the backend will show all the relevant items, :instruction[**whose title `contains` the same title query**].
         delay: 1200
       - text: As usuall, **send a PR when you’re done.**
         delay: 4000
