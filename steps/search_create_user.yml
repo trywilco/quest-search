@@ -43,6 +43,6 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: Cool, 
+                - text: https://media.giphy.com/media/37nRXpCEP9H1f1WVrb/giphy.gif
                   delay: 2000
           - actionId: finish_step
