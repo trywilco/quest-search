@@ -14,13 +14,15 @@ startFlow:
         delay: 1000
       - text: "A dishwasher! Who would want to buy a regular dishwasher?! Oh boy, we didn’t expect this to happen, like, ever. But some users just don’t know what’s good for them. I already checked with HR but they say we can’t punish them for it, so lets at least make sure we sternly reprimand them:"
         delay: 2700
-      - text: "Please :instruction[**add an appropriate scolding text to the system,**] to be displayed in the results box when a wayward user types in a string that doesn’t match any product in the system, and :instruction[**make sure that it had the id \"empty\"**]"
+      - text: "Please :instruction[**add an appropriate scolding text to the system,**] that will be displayed in the search results when a wayward user types in a string that doesn’t match any product in the system."
         delay: 7000
+      - text: :instruction[**Make sure that it has the id `empty`**]
+        delay: 
       - text: "Our designer said it should look something like this:"
         delay: 2300
       - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/search2_hcaplg.png
         delay: 1500
-      - text: And as usual, when ready, open a PR.
+      - text: When you're ready, open a PR.
         delay: 1200
 
 trigger:
@@ -34,13 +36,13 @@ trigger:
           - actionId: github_pr_comment
             params:
               person: head-of-rd
-              message: Got it, will review in a sec’
+              message: Got it, will review in a sec. 
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Got it, will review in a sec’
+              - text: Got it, will review in a sec. 
                 delay: 300
         github_pr_workflow_complete_success:
           do:
