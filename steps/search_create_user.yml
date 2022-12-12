@@ -8,21 +8,21 @@ startFlow:
         person: head-of-rd
         messages:
           - text: https://media.giphy.com/media/Tg6fSeh25F1b9dRCuL/giphy.gif
-            delay: 1800
+            delay: 2200
           - text: "So, here’s the thing"
             delay: 1700
           - text: "We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built."            
-            delay: 2400
-          - text: Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!”             
-            delay: 2500
-          - text: or “Everything is so messy, it's almost looks like you’re just selling a bunch of random stuff”. 
             delay: 3000
+          - text: Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!”             
+            delay: 4000
+          - text: or “Everything is so messy, it's almost looks like you’re just selling a bunch of random stuff”. 
+            delay: 4500
           - text: You know, the usual.
-            delay: 2200
+            delay: 3000
           - text: We were supposed to follow the protocol and just ignore them, but of course product suddenly decided they want us to **add a search option to the marketplace.**
             delay: 5000
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
-            delay: 2000
+            delay: 4500
           - text: To do that, :instruction[Go to the Anythink Marketplace UI in your local environment and **sign up**.]{block=true} 
             delay: 4000
           - text: Or, **if you already have a user, you can just go to your profile page**. 
