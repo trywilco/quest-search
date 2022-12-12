@@ -10,9 +10,9 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: Ok, so you created a user on Anythink, but now you need to have something to search for. 
-            delay: 1700
-          - text: So go ahead, :instruction[**add a single item to the Marketplace**].
+          - text: Nice! So you created a user on Anythink, but now you need to have something to search for. 
+            delay: 2200
+          - text: Go ahead, :instruction[**add a single item to the Marketplace**].
             delay: 2500
 trigger:
   type: local_page_load
