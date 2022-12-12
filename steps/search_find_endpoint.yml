@@ -1,6 +1,6 @@
 id: search_find_endpoint
 learningObjectives:
-  - Http requests
+  - Working with HTTP requests
 hints:
   - Try opening the **dev tools** to see the current request to the backend.
 startFlow:
