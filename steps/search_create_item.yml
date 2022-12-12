@@ -10,9 +10,9 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: Ok so you created a user on Anythink, but now you need to have something to search for. 
+          - text: Ok, so you created a user on Anythink, but now you need to have something to search for. 
             delay: 1700
-          - text: 'So go ahead, :instruction[**add a single item to the Marketplace**].'
+          - text: So go ahead, :instruction[**add a single item to the Marketplace**].
             delay: 2500
 trigger:
   type: local_page_load
@@ -30,6 +30,6 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you've chosen to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
+                - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you chose to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
                   delay: 2000
           - actionId: finish_step
