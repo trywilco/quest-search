@@ -9,7 +9,7 @@ startFlow:
       params:
         person: head-of-rd
         messages:
-          - text: Now you should :instruction[find out what's the endpoint path that the frontend hits, for fetching the marketplace items]
+          - text: Now you should :instruction[**find the path of the API endpoint that the frontend hits for fetching the marketplace items**]
             delay: 3000
           - text: When you do, just :instruction[send me a message with the link].
             delay: 2500
