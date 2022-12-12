@@ -44,6 +44,6 @@ messages:
       components:
       - type: schedule_learning_time
         params: 
-         navigate:
-         show: true
-         text: I was born ready!
+          navigate:
+            show: true
+            text: I was born ready!
