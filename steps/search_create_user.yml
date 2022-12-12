@@ -1,6 +1,6 @@
 id: search_create_user
 hints:
-  - Are you sure your local environment is still up? Did you remember running `docker-compose up`?
+  - Are you sure your local environment is still up? Did you remember to run `docker compose up`?
 startFlow:
   do:
     - actionId: bot_message
@@ -21,11 +21,11 @@ startFlow:
             delay: 1700
           - text: We were supposed to follow the protocol and just ignore them, but of course product suddenly decided they want us to **add a search option to the marketplace.**
             delay: 3300
-          - text: But, before we do anything, you probably want to **see the issue by yourself**, in your local environment.
+          - text: But, before we do anything, you probably want to **see the issue for yourself**.
             delay: 1700
-          - text: To do that, :instruction[Go to your local Anythink Market website and **sign up**.]{block=true} 
+          - text: To do that, :instruction[Go to the Anythink Marketplace UI in your local environment and **sign up**.]{block=true} 
             delay: 4000
-          - text: Or, **if you already got a user, you can just go to your profile page**. 
+          - text: Or, **if you already have a user, you can just go to your profile page**. 
             delay: 5000
 trigger:
   type: local_page_load
