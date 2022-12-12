@@ -16,17 +16,17 @@ startFlow:
           - text: Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!”             
             delay: 2500
           - text: or “Everything is so messy, it's almost looks like you’re just selling a bunch of random stuff”. 
-            delay: 2500
+            delay: 3000
           - text: You know, the usual.
-            delay: 1700
+            delay: 2200
           - text: We were supposed to follow the protocol and just ignore them, but of course product suddenly decided they want us to **add a search option to the marketplace.**
-            delay: 3300
+            delay: 5000
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
-            delay: 1700
+            delay: 2000
           - text: To do that, :instruction[Go to the Anythink Marketplace UI in your local environment and **sign up**.]{block=true} 
             delay: 4000
           - text: Or, **if you already have a user, you can just go to your profile page**. 
-            delay: 5000
+            delay: 6000
 trigger:
   type: local_page_load
   flowNode:
