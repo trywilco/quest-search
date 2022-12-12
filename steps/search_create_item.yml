@@ -3,7 +3,7 @@ learningObjectives:
   - Manually adding an item to Anythink Market
 hints:
   - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
-  - Still stuck, ah? Try to find **which api route add item to the DB, and which piece of code in the frontend call it.**
+  - Still stuck, huh? Try to find **which api route adds an item to the DB, and which part of the code in the frontend calls it.**
 startFlow:
   do:
     - actionId: bot_message
