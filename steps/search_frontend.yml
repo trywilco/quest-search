@@ -11,7 +11,7 @@ startFlow:
       messages:
       - text: Ok, so now that we have an API that can filter results, it’s time to add it to the UI!
         delay: 1200
-      - text: ":instruction[**Add a search box to the main page, with the id “search-box”.**]"
+      - text: ":instruction[**Add a search box to the main page, with the id `search-box`.**]"
         delay: 3000
       - text: "Here’s what it should look like:"
         delay: 2100
