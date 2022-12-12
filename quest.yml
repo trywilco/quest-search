@@ -4,6 +4,9 @@ description: As an elite marketplace, it's of most importance to match ${company
 level: intermediate
 slogan: Searching... Seek and Debug!
 steps:
+- search_create_user
+- search_create_item
+- search_find_endpoint
 - search_endpoint
 - search_frontend
 - search_empty
@@ -34,7 +37,13 @@ messages:
     messages:
     - text: That's it! What a remarkable job you did today! In fact, right now we’re having a party in your honor on the executive floor, with champagne, [beef bath salt](https://www.anythink.market/item/roast-beef-bath-soak-zhxpjb), and everything!
       delay: 3000
-    - text: I’m sorry you’re not allowed on this floor, but you know, one day. maybe.
+    - text: I’m sorry you’re not allowed on this floor, but you know... One day. Maybe.
       delay: 2000
-    - text: Meanwhile, you should **definitely [click here](${platform.home}) when you're ready for your next project**! 
-      delay: 1500
+    - text: Meanwhile, are you ready for your next assignment? 
+      delay: 3000
+      components:
+      - type: schedule_learning_time
+        params: 
+         navigate:
+         show: true
+         text: I was born ready!

@@ -1,0 +1,35 @@
+id: search_create_item
+learningObjectives:
+  - Manually adding an item to Anythink Market
+hints:
+  - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
+  - Still stuck, huh? Try to find **which API route adds an item to the DB, and which part of the code in the frontend calls it.**
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: Ok, so you created a user on Anythink, but now you need to have something to search for. 
+            delay: 1700
+          - text: So go ahead, :instruction[**add a single item to the Marketplace**].
+            delay: 2500
+trigger:
+  type: local_page_load
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${path}"
+            regex: ^/item/
+            flags: i
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you chose to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
+                  delay: 2000
+          - actionId: finish_step

@@ -1,0 +1,44 @@
+id: search_find_endpoint
+learningObjectives:
+  - Working with HTTP requests
+hints:
+  - Try opening the **dev tools** to see the current request to the backend.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: head-of-rd
+        messages:
+          - text: Now you should :instruction[**find the path of the API endpoint that the frontend hits for fetching the marketplace items**]
+            delay: 3000
+          - text: When you do, just :instruction[send me a message with the link].
+            delay: 2500
+trigger:
+  type: user_message
+  params:
+    person: head-of-rd
+  flowNode:
+    if:
+      conditions:
+        - conditionId: text_match_regex
+          params:
+            text: "${userMessageText}"
+            regex: .*/api/items.*
+            flags: i
+      then:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: Nailed it!
+                  delay: 1500
+          - actionId: finish_step
+      else:
+        do:
+          - actionId: bot_message
+            params:
+              person: head-of-rd
+              messages:
+                - text: "Umm, that doesn't look right. Are you sure this is the path that will return you the marketplace items?"
+                  delay: 1400
