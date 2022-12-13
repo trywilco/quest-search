@@ -59,7 +59,7 @@ const testItem = async () => {
   }
 
   if (getFilteredItems.data?.items[0].title !== "chocolate chips") {
-    console.log(`=!=!=!=!= ERROR: Wrong item was filtered - expected to find the item with the name "chocolate chips" when filtering for "chocolate"`);
+    console.log(`=!=!=!=!= ERROR: Wrong item was filtered - expected to find the item with the title "chocolate chips" when filtering for "chocolate"`);
     return false;
   }
 
