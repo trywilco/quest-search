@@ -43,23 +43,23 @@ const testItem = async () => {
   });
   const token = await getToken(client);
   client.defaults.headers.common["Authorization"] = `Token ${token}`;
-  await createItem(client, "title1");
-  await createItem(client, "another item");
+  await createItem(client, "chocolate chips");
+  await createItem(client, "chips");
 
-  const getFilteredItems = await client.get(`/api/items?title=title`);
+  const getFilteredItems = await client.get(`/api/items?title=chocolate`);
 
   if (!getFilteredItems.data?.items) {
-    console.log(`=!=!=!=!= ERROR: No item was found`);
+    console.log(`=!=!=!=!= ERROR: searched for items with title that contains the word chocolate but didn't find anything although with have an item with the title "chocolate chips"`);
     return false;
   }
 
   if (getFilteredItems.data?.items.length !== 1) {
-    console.log(`=!=!=!=!= ERROR: Wrong number of items filtered`);
+    console.log(`=!=!=!=!= ERROR: Wrong number of items filtered - expected to find exactly one item.`);
     return false;
   }
 
-  if (getFilteredItems.data?.items[0].title !== "title1") {
-    console.log(`=!=!=!=!= ERROR: Wrong item was filtered`);
+  if (getFilteredItems.data?.items[0].title !== "chocolate chips") {
+    console.log(`=!=!=!=!= ERROR: Wrong item was filtered - expected to find the item with the title "chocolate chips" when filtering for "chocolate"`);
     return false;
   }
 
