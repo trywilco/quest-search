@@ -54,7 +54,7 @@ const testItem = async () => {
   }
 
   if (getFilteredItems.data?.items.length !== 1) {
-    console.log(`=!=!=!=!= ERROR: Wrong number of items filtered - expected to find exactly one item.`);
+    console.log(`=!=!=!=!= ERROR: Wrong number of items filtered - expected to find exactly one item. Are you sure you tested it locally?`);
     return false;
   }
 
