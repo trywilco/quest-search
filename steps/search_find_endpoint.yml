@@ -40,5 +40,5 @@ trigger:
             params:
               person: head-of-rd
               messages:
-                - text: "Umm, that doesn't look right. Are you sure this is the path that will return you the marketplace items?"
+                - text: "Umm, that doesn't look right. Are you sure this is the api path that will return you the marketplace items?"
                   delay: 1400
