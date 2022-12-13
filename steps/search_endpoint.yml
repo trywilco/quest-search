@@ -53,14 +53,18 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Umm… something is not quite right, please take another look and try again.
+              message: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Umm… something is not quite right, please take another look and try again.
+              - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
                 delay: 300
+              - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
+                delay: 300
+              - text: Anyway, if you want to get some more idea to what went wrong, check out the github actions that failed, and look at the logs there.
+                  delay: 300
         github_pr_merged:
           do:
           - actionId: finish_step
