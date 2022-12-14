@@ -61,10 +61,8 @@ trigger:
               messages:
               - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
                 delay: 300
-              - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
-                delay: 300
               - text: Anyway, if you want to get some more idea to what went wrong, check out the github actions that failed, and look at the logs there.
-                  delay: 300
+                delay: 300
         github_pr_merged:
           do:
           - actionId: finish_step
