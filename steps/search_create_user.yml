@@ -23,11 +23,11 @@ startFlow:
             delay: 5000
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
             delay: 4500
-          - text: To do that, :instruction[use the **Codespace (Web)** link on the left sidebar] (or in VS Code, if you prefer) to open your dev env
+          - text: To do that, :instruction[use the **Codespace (Web)** link on the left sidebar] (or in VS Code, if you prefer) to open your dev env.
             delay: 4000
-          - text: Once your codespace is up and running, :instruction[fire it up with **"docker compose up"**]
+          - text: Once your codespace is up and running, :instruction[fire it up with **"docker compose up"**].
             delay: 4000
-          - text: Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market
+          - text: Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
             delay: 4000
           - text: When Anythink Marketplace loads, :instruction[**sign up** with a new user], or, **if you already have a user, you can just go to your profile page**.
             delay: 4000
