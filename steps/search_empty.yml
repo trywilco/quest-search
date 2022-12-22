@@ -18,7 +18,7 @@ startFlow:
         delay: 7000
       - text: :instruction[**Make sure that it has the id `empty`**]
         delay: 
-      - text: "Our designer said it should look something like this (don't dwell too much on the design, functionality is king):"
+      - text: "Our designer said it should look something like this (don't dwell too much on the design, we only care about functionality right now):"
         delay: 2300
       - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/search2_hcaplg.png
         delay: 1500
