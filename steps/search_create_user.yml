@@ -1,6 +1,6 @@
 id: search_create_user
 hints:
-  - Are you sure your local environment is still up? Did you remember to run `docker compose up`?
+  - Are you sure your dev (local/codespace) environment is still up? Did you remember to run `docker compose up`?
 startFlow:
   do:
     - actionId: bot_message
@@ -11,7 +11,7 @@ startFlow:
             delay: 2200
           - text: "So, here’s the thing"
             delay: 1700
-          - text: "We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built."            
+          - text: "We’ve been getting complaints about the way our marketplace is built."
             delay: 3000
           - text: Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!”             
             delay: 4000
@@ -23,7 +23,7 @@ startFlow:
             delay: 5000
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
             delay: 4500
-          - text: To do that, :instruction[Go to the Anythink Marketplace UI in your local environment and **sign up**.]{block=true} 
+          - text: To do that, :instruction[Go to the Anythink Marketplace UI in your **dev** environment and **sign up**.]{block=true}
             delay: 4000
           - text: Or, **if you already have a user, you can just go to your profile page**. 
             delay: 6000

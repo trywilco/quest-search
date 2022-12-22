@@ -3,6 +3,7 @@ learningObjectives:
 - Adding a UI component 
 hints:
 - You should probably try adding an [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for searching.
+- It should be pretty similar to how we apply the tag filter (APPLY_TAG_FILTER) when the user chooses a tag.
 startFlow:
   do:
   - actionId: bot_message
@@ -13,7 +14,7 @@ startFlow:
         delay: 1200
       - text: ":instruction[**Add a search box to the main page, with the id `search-box`.**]"
         delay: 3000
-      - text: "Here’s what it should look like:"
+      - text: "Here’s what it should look like (you can ignore the magnifying glass icon for now):"
         delay: 2100
       - text: https://res.cloudinary.com/ness90210/image/upload/v1658051139/Anythink_search/UI/Screen-Shot-SearchUI.png
         delay: 1800
@@ -50,13 +51,13 @@ trigger:
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: Yay, it works!
+              message: Yay, it works! Go ahead and merge the PR.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Yay, it works!
+              - text: Yay, it works! Go ahead and merge the PR.
                 delay: 1000
         github_pr_workflow_complete_failure:
           do:
