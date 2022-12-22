@@ -25,7 +25,7 @@ messages:
       delay: 0
     - text: Oh, great, you're here!
       delay: 300
-    - text: "before you do anything else, please **run the following command** on your repo: `${scriptCommand}`, and **let me know** once you're done."
+    - text: "Before you do anything else, please **open your Codespace dev environment from the Snack side menu and run the following command on your repo from the terminal**: `${scriptCommand}`, and **let me know** once you're done."
       delay: 600
   questStartedNotReady:
     person: head-of-rd

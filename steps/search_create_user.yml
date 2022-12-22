@@ -23,7 +23,7 @@ startFlow:
             delay: 5000
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
             delay: 4500
-          - text: To do that, :instruction[use the **Codespace (Web)** link on the left sidebar] (or in VS Code, if you prefer) to open your dev env.
+          - text: To do that, :instruction[use the **Codespace (Web)** link on the sidebar] (or in VS Code, if you prefer) to open your dev env.
             delay: 4000
           - text: Once your codespace is up and running, :instruction[fire it up with **"docker compose up"**].
             delay: 4000
