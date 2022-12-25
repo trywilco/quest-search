@@ -10,7 +10,6 @@ steps:
 - search_endpoint
 - search_frontend
 - search_empty
-- search_secret_open
 duration: 3
 skills:
 - database
