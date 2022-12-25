@@ -29,6 +29,8 @@ startFlow:
             delay: 4000
           - text: Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
             delay: 4000
+          - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/ports.png
+            delay: 1000
           - text: When Anythink Marketplace loads, :instruction[**sign up** with a new user], or, **if you already have a user, you can just go to your profile page**.
             delay: 4000
 trigger:
