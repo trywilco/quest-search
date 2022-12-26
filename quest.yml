@@ -11,7 +11,7 @@ steps:
 - search_frontend
 - search_empty
 - search_secret_open
-duration: 3
+duration: 2
 skills:
 - database
 - backend
