@@ -10,7 +10,7 @@ steps:
 - search_endpoint
 - search_frontend
 - search_empty
-duration: 3
+duration: 2
 skills:
 - database
 - backend
