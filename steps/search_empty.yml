@@ -62,13 +62,13 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Let’s try this again, shall we?
+              message: Let’s try this again, shall we? **Make sure all [checks](${githubWorkflowRunUrl}) pass**.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Let’s try this again, shall we?
+              - text: Let’s try this again, shall we? **Make sure all [checks](${githubWorkflowRunUrl}) pass**.
                 delay: 300
         github_pr_merged:
           do:

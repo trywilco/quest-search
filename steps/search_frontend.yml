@@ -64,13 +64,13 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Bummer, it looks like the frontend doesn't work. Let’s give it another try.
+              message: Bummer, it looks like the frontend doesn't work. Let’s give it another try and **make sure all [checks](${githubWorkflowRunUrl}) pass**.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Bummer, it looks like the frontend doesn't work. Let’s give it another try.
+              - text: Bummer, it looks like the frontend doesn't work. Let’s give it another try and **make sure all [checks](${githubWorkflowRunUrl}) pass**.
                 delay: 1000
         github_pr_merged:
           do:

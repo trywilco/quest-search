@@ -54,13 +54,13 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
+              message: Umm… something is not quite right, did you follow the **exact** instructions I gave you? Also, **make sure all [checks](${githubWorkflowRunUrl}) pass**.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you?
+              - text: Umm… something is not quite right, did you follow the **exact** instructions I gave you? Also, **make sure all [checks](${githubWorkflowRunUrl}) pass**.
                 delay: 300
               - text: Anyway, if you want to get some more idea to what went wrong, check out the github actions that failed, and look at the logs there.
                 delay: 300
