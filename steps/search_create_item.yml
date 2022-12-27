@@ -33,3 +33,10 @@ trigger:
                 - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you chose to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
                   delay: 2000
           - actionId: finish_step
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: To add a new item go to the Anythink Market, click the "New Item" button in the header.
+          - text: Add a title, a description, and an image (if you have one), and publish the item.

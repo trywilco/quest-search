@@ -43,3 +43,9 @@ trigger:
               messages:
                 - text: "Umm, that doesn't look right. Are you sure this is the api path that will return the marketplace items?"
                   delay: 1400
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: Looking at the Network while loading the Market homepage, seems like the items are coming via the :instruction[**/api/items**] route

@@ -73,7 +73,6 @@ trigger:
         github_pr_merged:
           do:
           - actionId: finish_step
-
 githubActions:
   backend:
   frontend:
@@ -81,3 +80,11 @@ githubActions:
     - jest-puppeteer
     - "puppeteer@18.1.0"
     testFile: "search-empty.test.js"
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: The `ItemList` component is responsible for presenting the list of the items.
+          - text: Make sure you present it only if the user didn't use the search **or** there are one or more items to show.
+          - text: Otherwise, show some text to the user, telling him that we don't have any items to show based on his search.

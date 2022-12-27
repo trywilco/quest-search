@@ -67,11 +67,18 @@ trigger:
         github_pr_merged:
           do:
           - actionId: finish_step
-
-
 githubActions:
   backend:
     capabilities:
     - axios
     - dotenv
     testFile: "filter.js"
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: First, locate the place in the backend code, that handles the `/api/items` route.
+          - text: This route is already programmed to handle `limit`, `offset` and `tag` passed as query params.
+          - text: Add support for the new query param `title` in the same place as the other params.
+          - text: Eventually, if `title` is passed, add the `title` filter to the query in a similar way that `tag` is filtered, just remember that the requirement is for title to **contain** the search term.
