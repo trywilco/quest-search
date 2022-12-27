@@ -61,7 +61,7 @@ solution:
           - text: To do that, :instruction[use the **Codespace (Web)** link on the sidebar] (or in VS Code, if you prefer) to open your dev env.
           - text: Once your codespace is up and running, :instruction[fire it up with **"docker-compose up"**].
           - text: |
-            Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
+            - Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
             https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/ports.png
             The url is :instruction[**Go to https://${user.codespace.name}-3001.preview.app.github.dev**]
           - text: :instruction[If you encounter a problem, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
