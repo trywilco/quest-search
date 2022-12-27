@@ -48,4 +48,4 @@ solution:
     - actionId: bot_message
       params:
         messages:
-          - text: Looking at the Network while loading the Market homepage, seems like the items are coming via the :instruction[**/api/items**] route
+          - text: Looking at the Network while loading the Market homepage, seems like the items are coming via the :instruction[**/api/items**] route.
