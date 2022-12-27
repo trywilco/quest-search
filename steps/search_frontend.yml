@@ -3,7 +3,7 @@ learningObjectives:
 - Adding a UI component 
 hints:
 - You should probably try adding an [input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for searching.
-- It should be pretty similar to how we apply the tag filter (APPLY_TAG_FILTER) when the user chooses a tag.
+- It should be pretty similar to how we apply the tag filter `APPLY_TAG_FILTER` when the user chooses a tag.
 startFlow:
   do:
   - actionId: bot_message
@@ -87,6 +87,6 @@ solution:
           - text: According to the requirement, the right place to add the `Input` element is the Banner "frontend/src/components/Home/Banner.js".
           - text: The Banner should now get a parameter, that will be used in the Input element for the search term itself (as `value`) and the function that will be used in the `onChange` event for updating the search term.
           - text: The `onChange` event, is also the place to make sure that the filter will be applied only after the user entered 3 or more characters in the search box.
-          - text: After that, it will be a good idea to add a new actionType `APPLY_SEARCH_FILTER` and a `search` attribute to the state - try looking into how APPLY_TAG_FILTER and the state are managed in "frontend/src/reducers/itemList.js", and where APPLY_TAG_FILTER is used around the app.
+          - text: After that, it will be a good idea to add a new actionType `APPLY_SEARCH_FILTER` and a `search` attribute to the state - try looking into how `APPLY_TAG_FILTER` and the state are managed in "frontend/src/reducers/itemList.js", and where `APPLY_TAG_FILTER` is used around the app.
           - text: The file "frontend/src/components/Home/index.js" is the place where the Banner is called, so it will be a good idea to pass it the new parameters it needs, and also don't forget to take a look at how `mapDispatchToProps` is defined.
           - text: Lastly, in order to make the API calls that you worked on in the previous step, you will need to make some changes in "frontend/src/agent.js" so that the `title` is passed in the url params.
