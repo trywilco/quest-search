@@ -1,6 +1,6 @@
 id: search_create_user
 hints:
-  - Are you sure your local environment is still up? Did you remember to run `docker compose up`?
+  - Make sure your dev (local/codespace) environment is still up and don't forget to run `docker-compose up`.
 startFlow:
   do:
     - actionId: bot_message
@@ -11,22 +11,28 @@ startFlow:
             delay: 2200
           - text: "So, here’s the thing"
             delay: 1700
-          - text: "We’ve been getting complaints about the way our [marketplace](https://home.anythink.market/) is built."            
-            delay: 3000
+          - text: "We’ve been getting complaints about the way our marketplace is built."
+            delay: 1000
           - text: Things like “How am I supposed to find anything when it seems like every page is devoted to a Squirrel picnic desk!”             
-            delay: 4000
+            delay: 1500
           - text: or “Everything is so messy, it's almost looks like you’re just selling a bunch of random stuff”. 
-            delay: 4500
+            delay: 1500
           - text: You know, the usual.
-            delay: 3000
+            delay: 1000
           - text: We were supposed to follow the protocol and just ignore them, but of course product suddenly decided they want us to **add a search option to the marketplace.**
-            delay: 5000
+            delay: 200
           - text: But, before we do anything, you probably want to **see the issue for yourself**.
-            delay: 4500
-          - text: To do that, :instruction[Go to the Anythink Marketplace UI in your local environment and **sign up**.]{block=true} 
-            delay: 4000
-          - text: Or, **if you already have a user, you can just go to your profile page**. 
-            delay: 6000
+            delay: 1000
+          - text: To do that, :instruction[use the **Codespace (Web)** link on the sidebar] (or in VS Code, if you prefer) to open your development environment.
+            delay: 1500
+          - text: Once your codespace is up and running, :instruction[fire it up with **"docker-compose up"**].
+            delay: 1500
+          - text: Let docker do it's magic, and when done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
+            delay: 2000
+          - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/ports.png
+            delay: 1000
+          - text: When Anythink Marketplace loads, :instruction[**sign up** with a new user], or, **if you already have a user, you can just go to your profile page**.
+            delay: 2000
 trigger:
   type: local_page_load
   flowNode:
@@ -46,3 +52,17 @@ trigger:
                 - text: https://media.giphy.com/media/37nRXpCEP9H1f1WVrb/giphy.gif
                   delay: 2000
           - actionId: finish_step
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: First of all, let's make sure that you have your dev environment up and running.
+          - text: To do that, :instruction[use the **Codespace (Web)** link on the sidebar] (or in VS Code, if you prefer) to open your dev env.
+          - text: Once your codespace is up and running, :instruction[fire it up with **"docker-compose up"**].
+          - text: |
+              - Let docker do its magic. When it's done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
+              https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/ports.png
+              The url is :instruction[**Go to https://${user.codespace.name}-3001.preview.app.github.dev**]
+          - text: :instruction[If you encounter a problem, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
+          - text: When Anythink Marketplace loads, :instruction[**sign up** with a new user], or, **if you already have a user, you can just go to your profile page**.

@@ -18,7 +18,7 @@ startFlow:
         delay: 7000
       - text: :instruction[**Make sure that it has the id `empty`**]
         delay: 
-      - text: "Our designer said it should look something like this:"
+      - text: "Our designer said it should look something like this. Don't dwell too much on the design, we only care about functionality right now."
         delay: 2300
       - text: https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/search2_hcaplg.png
         delay: 1500
@@ -49,31 +49,30 @@ trigger:
           - actionId: github_pr_approve
             params:
               person: head-of-rd
-              message: Approved! Awesome job 😀
+              message: Approved! Awesome job 😀. Go ahead and merge the PR.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Approved! Awesome job 😀
+              - text: Approved! Awesome job 😀. Go ahead and merge the PR.
                 delay: 300
         github_pr_workflow_complete_failure:
           do:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Let’s try this again, shall we?
+              message: Let’s try this again, shall we? **Make sure all [checks](${githubWorkflowRunUrl}) pass**.
 
           - actionId: bot_message
             params:
               person: head-of-rd
               messages:
-              - text: Let’s try this again, shall we?
+              - text: Let’s try this again, shall we? **Make sure all [checks](${githubWorkflowRunUrl}) pass**.
                 delay: 300
         github_pr_merged:
           do:
           - actionId: finish_step
-
 githubActions:
   backend:
   frontend:
@@ -81,3 +80,11 @@ githubActions:
     - jest-puppeteer
     - "puppeteer@18.1.0"
     testFile: "search-empty.test.js"
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: The `ItemList` component is responsible for presenting the list of the items.
+          - text: Make sure you present the `ItemList` only if the user didn't search for anything **or** there are items to show.
+          - text: Otherwise, show some text to the user, telling them we don't have any items to show based on their search.

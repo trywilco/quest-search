@@ -3,7 +3,7 @@ learningObjectives:
   - Manually adding an item to Anythink Market
 hints:
   - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
-  - Still stuck, huh? Try to find **which API route adds an item to the DB, and which part of the code in the frontend calls it.**
+  - Still stuck, huh? Look for the button in the Anythink Market header.
 startFlow:
   do:
     - actionId: bot_message
@@ -33,3 +33,10 @@ trigger:
                 - text: Good! Although, I'm going to ignore the fact that from all of the possible items in the world, you chose to go with a ${Lodash.startCase(Lodash.dropRight(path.slice(6).split("-")).join("-"))}
                   delay: 2000
           - actionId: finish_step
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: To add a new item go to the Anythink Market and click the "New Item" button in the header.
+          - text: Add a title, a description, and an image (if you have one), and publish the item.

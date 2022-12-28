@@ -3,6 +3,7 @@ learningObjectives:
   - Working with HTTP requests
 hints:
   - Try opening the **dev tools** to see the current request to the backend.
+  - Look for changes in the [Network](https://developer.chrome.com/docs/devtools/network) (Fetch/XHR) when you load the "global feed".
 startFlow:
   do:
     - actionId: bot_message
@@ -42,3 +43,9 @@ trigger:
               messages:
                 - text: "Umm, that doesn't look right. Are you sure this is the api path that will return the marketplace items?"
                   delay: 1400
+solution:
+  do:
+    - actionId: bot_message
+      params:
+        messages:
+          - text: Looking at the [Network](https://developer.chrome.com/docs/devtools/network) while loading the Market homepage, it seems like the items are coming via the :instruction[**/api/items**] route.
