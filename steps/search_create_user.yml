@@ -1,6 +1,6 @@
 id: search_create_user
 hints:
-  - Are you sure your dev (local/codespace) environment is still up? Did you remember to run `docker-compose up`?
+  - Make sure that your dev (local/codespace) environment is still up, and don't forget to run `docker-compose up`.
 startFlow:
   do:
     - actionId: bot_message
