@@ -54,7 +54,7 @@ trigger:
           - actionId: github_pr_reject
             params:
               person: head-of-rd
-              message: Umm… something is not quite right, did you follow the **exact** instructions I gave you? Also, **make sure all [checks](${githubWorkflowRunUrl}) pass**.
+              message: Umm, something is not quite right! Did you follow the **exact** instructions I gave you? Also, **make sure all [checks](${githubWorkflowRunUrl}) pass**.
 
           - actionId: bot_message
             params:
