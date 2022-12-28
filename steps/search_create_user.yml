@@ -57,7 +57,7 @@ solution:
     - actionId: bot_message
       params:
         messages:
-          - text: First of all, let's make sure that you have your dev envioronment up and running.
+          - text: First of all, let's make sure that you have your dev environment up and running.
           - text: To do that, :instruction[use the **Codespace (Web)** link on the sidebar] (or in VS Code, if you prefer) to open your dev env.
           - text: Once your codespace is up and running, :instruction[fire it up with **"docker-compose up"**].
           - text: |
