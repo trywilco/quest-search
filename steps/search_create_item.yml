@@ -3,7 +3,7 @@ learningObjectives:
   - Manually adding an item to Anythink Market
 hints:
   - Oh, OK! Maybe you should try to **find the page that lets you add new items.**
-  - Look for the button in the Anythink Market header.
+  - Still stuck, uh? Look for the button in the Anythink Market header.
 startFlow:
   do:
     - actionId: bot_message
