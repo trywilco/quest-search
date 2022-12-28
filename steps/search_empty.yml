@@ -87,4 +87,4 @@ solution:
         messages:
           - text: The `ItemList` component is responsible for presenting the list of the items.
           - text: Make sure you present it only if the user didn't use the search **or** there are one or more items to show.
-          - text: Otherwise, show some text to the user, telling him that we don't have any items to show based on his search.
+          - text: Otherwise, show some text to the user, telling them we don't have any items to show based on their search.
