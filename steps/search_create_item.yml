@@ -38,5 +38,5 @@ solution:
     - actionId: bot_message
       params:
         messages:
-          - text: To add a new item go to the Anythink Market, click the "New Item" button in the header.
+          - text: To add a new item go to the Anythink Market and click the "New Item" button in the header.
           - text: Add a title, a description, and an image (if you have one), and publish the item.
