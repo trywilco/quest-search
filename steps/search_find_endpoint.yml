@@ -3,7 +3,7 @@ learningObjectives:
   - Working with HTTP requests
 hints:
   - Try opening the **dev tools** to see the current request to the backend.
-  - Look for changes in the Network (Fetch/XHR) when you load the "global feed".
+  - Look for changes in the [Network](https://developer.chrome.com/docs/devtools/network) (Fetch/XHR) when you load the "global feed".
 startFlow:
   do:
     - actionId: bot_message
@@ -48,4 +48,4 @@ solution:
     - actionId: bot_message
       params:
         messages:
-          - text: Looking at the Network while loading the Market homepage, seems like the items are coming via the :instruction[**/api/items**] route.
+          - text: Looking at the [Network](https://developer.chrome.com/docs/devtools/network) while loading the Market homepage, seems like the items are coming via the :instruction[**/api/items**] route.
