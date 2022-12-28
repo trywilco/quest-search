@@ -4,7 +4,7 @@ learningObjectives:
 hints:
 - Glad you asked! Are you aware that our backend already supports some filtering options (for example, filter by tag)? You can add another filter by term.
 - Our product manager insists that partial matches, not only exact matches, must be returned by the query. 
-- Try adding the title passed in the query params to the query we run to find the items.
+- To find the items, try adding the title passed in the query parameters to the query we run.
 startFlow:
   do:
   - actionId: bot_message
