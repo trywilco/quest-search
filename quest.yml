@@ -17,20 +17,6 @@ skills:
 - frontend
 questDependency: docker_localsetup
 messages:
-  questStarted:
-    person: head-of-rd
-    messages:
-    - text: "![](https://media.giphy.com/media/rcqCnhuDvFAF1WoDN3/giphy.gif)"
-      delay: 0
-    - text: Oh, great, you're here!
-      delay: 300
-    - text: "Before you do anything else, please **open your Codespace dev environment from the Snack side menu. In it, run the following command on your repo from the terminal**: `${scriptCommand}` and **let me know** when you're done."
-      delay: 600
-  questStartedNotReady:
-    person: head-of-rd
-    messages:
-    - text: Let me know when you are ready.
-      delay: 300
   questFinished:
     person: head-of-rd
     messages:
