@@ -17,11 +17,6 @@ skills:
 - frontend
 questDependency: docker_localsetup
 messages:
-  questStartedNotReady:
-    person: head-of-rd
-    messages:
-    - text: Let me know when you are ready.
-      delay: 300
   questFinished:
     person: head-of-rd
     messages:
