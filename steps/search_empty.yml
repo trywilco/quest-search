@@ -78,7 +78,6 @@ githubActions:
   frontend:
     capabilities:
     - jest-puppeteer
-    - "puppeteer@18.1.0"
     testFile: "search-empty.test.js"
 solution:
   do:
