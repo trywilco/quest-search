@@ -47,5 +47,6 @@ solution:
   do:
     - actionId: bot_message
       params:
+        person: head-of-rd
         messages:
           - text: Looking at the [Network](https://developer.chrome.com/docs/devtools/network) while loading the Market homepage, it seems like the items are coming via the :instruction[**/api/items**] route.
