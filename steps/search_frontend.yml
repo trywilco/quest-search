@@ -83,6 +83,7 @@ solution:
   do:
     - actionId: bot_message
       params:
+        person: head-of-rd
         messages:
           - text: According to the requirement, the right place to add the `Input` element is the Banner "frontend/src/components/Home/Banner.js".
           - text: The Banner should now get a parameter that will be used in the Input element for the search term itself (as `value`) and the function that will be used in the `onChange` event for updating the search term.

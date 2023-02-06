@@ -77,6 +77,7 @@ solution:
   do:
     - actionId: bot_message
       params:
+        person: head-of-rd
         messages:
           - text: First, locate the spot in the backend code, that handles the `/api/items` route.
           - text: This route is already programmed to handle `limit`, `offset` and `tag` passed as query params.
