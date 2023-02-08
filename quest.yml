@@ -1,5 +1,5 @@
 id: search
-title: Search party
+title: Learn full-stack basics by implementing search on front/back/db
 description: As an elite marketplace, it's of most importance to match ${companyName} users with the perfect product they need  - even if they didn’t know that they need them to begin with.\nTherefore, in this quest, you'll create an easy way for ${companyName}’s users to find what they're truly looking for.
 level: advance
 slogan: Searching... Seek and Debug!
