@@ -1,7 +1,9 @@
 id: search
 title: Search Party
 subtitle: Learn full-stack basics by implementing search on front/back/db
-description: As an elite marketplace, it's of most importance to match ${companyName} users with the perfect product they need  - even if they didn’t know that they need them to begin with.\nTherefore, in this quest, you'll create an easy way for ${companyName}’s users to find what they're truly looking for.
+description: |
+  As an elite marketplace, it's of most importance to match Anythink users with the perfect product they need  - even if they didn’t know that they need them to begin with.
+  Therefore, in this quest, you'll create an easy way for Anythink’s users to find what they're truly looking for.
 level: advance
 slogan: Searching... Seek and Debug!
 steps:
@@ -25,3 +27,4 @@ messages:
       delay: 3000
     - text: I’m sorry you’re not allowed on this floor, but you know... One day. Maybe.
       delay: 2000
+repository: https://github.com/trywilco/Anythink-Market-Public
