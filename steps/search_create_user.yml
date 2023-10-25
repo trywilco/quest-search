@@ -64,6 +64,6 @@ solution:
           - text: |
               - Let docker do its magic. When it's done, :instruction[go to the **PORTS** tab and click the **Frontend** Local Address] to access your local Anythink Market.
               https://res.cloudinary.com/wilco/image/upload/v1669628851/anythink-assets/Images%20for%20quests/Search%20quest/ports.png
-              The url is :instruction[**Go to you codespace port 3001**]
+              The url is :instruction[**Go to your codespace's port 3001**]
           - text: :instruction[If you encounter a problem, make sure that the `docker-compose up` process has finished running and try again.]{block=true}
           - text: When Anythink Marketplace loads, :instruction[**sign up** with a new user], or, **if you already have a user, you can just go to your profile page**.
